@@ -1,5 +1,6 @@
 import React from 'react';
 import blogPostData from './blogPostData';
+import "./index.css"
 
 //create BlogPost functional component
 function BlogPost (){
@@ -14,11 +15,11 @@ function BlogPost (){
                     <div>
                         <h1>{post.title}</h1>
                         <h2>by {post.author}</h2>
-                        <time>{post.datePosted}</time>
-                        <div></div>
+                        <p id="time">{post.datePosted}</p>
+                        <div className="red-rectangle"></div>
                         <img src={post.image} alt={post.alt}/>
-                        <p>{post.alt}</p>
-                        <p>{post.text}</p>
+                        <p id='image-alt'>{post.alt}</p>
+                        <p id='post-text'>{post.text}</p>
                     </div>
                     
                 )
