@@ -15,19 +15,34 @@ function Comment(){
     const firstName = comments[0].author.split(" ")[0];
     const lastName = comments[0].author.split(" ")[1];
     //get the intial letters
-    const firstIntial = firstName.charAt(0);
-    const lastIntial = lastName.charAt(0);
-    const intials = firstIntial+lastIntial;
-    document.getElementById("name").innerHTML = intials;
+    const firstInitial = firstName.charAt(0);
+    const lastInitial = lastName.charAt(0);
+    const initials = firstInitial+lastInitial;
+    //put the intials inside the div circle
+    function addInitialsInAvatar(){
+        document.getElementById("name").innerHTML = `${initials}`;
+    }
+    //execute the function after the page loads
+    window.onload = function(){
+        addInitialsInAvatar();
+    }
+    
     return (
-        <div>
-            <span id="firstName">{firstName}</span>
-            <span id="lastName">{lastName}</span>
-            <div id="container">
-                <div id="name">
+        <div className="comment-block">
+            <div className="comment-line1">
+                <div id="container">
+                    <div id="name">     
+                    </div>
                 </div>
+                <span id="full-name">{firstName} {lastName}</span>
             </div>
+            <div className="comment-line2">
+                <span id="comment-text">{comments[0].text}</span>
+            </div>
+            <hr/>
         </div>
-    )
+        
+    );
+    
 }
 export default Comment;
