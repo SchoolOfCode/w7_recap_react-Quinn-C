@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import BlogPost from "../BlogPost";
-import Comment from "../Comment";
+import CommentList from "../CommentList";
+import listCommentData from "./listCommentData";
 
-
+//store comments in state 
 function App() {
+  const[comments, setComments] = useState(listCommentData)
   return (
     <div className="App">
       <BlogPost />
-      <Comment />
+      <CommentList comments={comments}/>
     </div>
   );
 }
