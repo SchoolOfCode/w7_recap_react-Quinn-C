@@ -1,0 +1,42 @@
+#container {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background: rgb(230, 110, 130);
+  }
+  #name {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+  }
+ #full-name, #comment-text{
+     font-size: medium;
+     font-weight: 500;
+ }
+
+ .comment-line1{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:20px;
+    width:90%;
+    
+    
+ }
+.comment-line2{
+    display: flex;
+    justify-content:flex-start;
+    padding-left:50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.comment-block{
+    padding-top: 50px;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+ 

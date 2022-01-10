@@ -1,24 +1,21 @@
-import React from "react";
-import logo from "../../logo.svg";
+import React, {useState} from "react";
 import "./App.css";
+import BlogPost from "../BlogPost";
+import CommentsSection from "../CommentsSection";
+import listCommentData from "./listCommentData";
 
+//store comments in state 
 function App() {
+  const[comments, setComments] = useState(listCommentData);
+
+  //add the input as newComment from user to comments list
+  function addComment(newComment){
+    setComments([...comments, newComment]);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlogPost/>
+      <CommentsSection comments={comments} addComment={(a)=>{addComment(a)}}/>
     </div>
   );
 }
