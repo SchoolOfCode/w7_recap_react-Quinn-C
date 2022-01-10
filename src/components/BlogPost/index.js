@@ -12,7 +12,7 @@ function BlogPost (){
         <div>
             {blogPostData.map(function(post){
                 return(
-                    <div>
+                    <div key={post.text}>
                         <h1>{post.title}</h1>
                         <h2>by {post.author}</h2>
                         <p id="time">{post.datePosted}</p>

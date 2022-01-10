@@ -15,8 +15,8 @@ function Comment({author, text}){
     const firstName = author.split(" ")[0];
     const lastName = author.split(" ")[1];
     //get the intial letters
-    const firstInitial = firstName.charAt(0);
-    const lastInitial = lastName.charAt(0);
+    const firstInitial = firstName.charAt(0).toUpperCase();
+    const lastInitial = lastName.charAt(0).toUpperCase();
     const initials = firstInitial+lastInitial;
     //put the intials inside the div circle
     // function addInitialsInAvatar(){
