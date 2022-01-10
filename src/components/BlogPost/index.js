@@ -10,9 +10,9 @@ function BlogPost (){
     //in the 
     return (
         <div>
-            {blogPostData.map(function(post){
+            {blogPostData.map(function(post, index){
                 return(
-                    <div key={post.text}>
+                    <div key={index}>
                         <h1>{post.title}</h1>
                         <h2>by {post.author}</h2>
                         <p id="time">{post.datePosted}</p>

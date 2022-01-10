@@ -6,8 +6,8 @@ function CommentList({comments}){
     console.log(comments)
     return(
         <div>
-            {comments.map(function(comment){
-            return <Comment author={comment.author} text={comment.text} key={comment.text}/>
+            {comments.map(function(comment, index){
+            return <Comment author={comment.author} text={comment.text} key={index}/>
             })
 
         }
